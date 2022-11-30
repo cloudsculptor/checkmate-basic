@@ -6,7 +6,49 @@
     <body>
         <h1><a href="../../index.html">&lt;</a><span>Titles PR review</span></h1>
         <ul>
-            <li><input type="checkbox">Rebase off master<span></span></li>
+            <li>
+                <h2>Setup</h2>
+                <ul>
+                    <li><input type="checkbox"><span>Open PR in Github</span></li>                    
+                    <li><input type="checkbox"><span>Open PR in IntelliJ</span></li>                    
+                    <li><input type="checkbox"><span>Check out branch locally and run</span></li>                    
+                </ul>
+            </li>
+            <li>
+                <h2>Test actual functionality</h2>
+                <ul>
+                    <li><input type="checkbox"><span>Read Jira</span></li>
+                    <li><input type="checkbox"><span>See that it does what it says it does</span></li>
+                </ul>
+            </li>
+            <li>
+                <h2>Consider functionality tests required</h2>
+                <ul>
+                    <li><input type="checkbox"><span>Make a list of functional tests you think it should have</span></li>                         
+                    <li><input type="checkbox"><span>Look for these tests</span></li>                         
+                    <li><input type="checkbox"><span>Consider the functional tests it has, are they enough?</span></li>                         
+                </ul>
+            </li>
+            <li>
+                <h2>Read and understand the code</h2>
+                <ul>
+                    <li><input type="checkbox"><span>Read and undserstand code</span></li>                         
+                    <li><input type="checkbox"><span>Could you explain what it does to someone else?</span></li>                         
+                    <li><input type="checkbox"><span>Can you think of better patterns?</span></li>                         
+                </ul>
+            </li>
+            <li>
+                <h2>Other</h2>
+                <ul>
+                    <li>
+                        <input type="checkbox"><span>Check for bits and bobs that should be covered:</span>
+                        <ul>
+                            <li><input type="checkbox"><span>No `console.log` statements</span></li>                         
+                        </ul>
+                    </li>                         
+        
+                </ul>
+            </li>
         </ul>
         <button onclick="javascript: location.reload();">Clear</button>
     </body>
