@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <Title>Checkmate</Title>
+        <link rel="stylesheet" href="../../checkmate.css">
+    </head>
+    <body>
+        <h1><a href="../../index.html">&lt;</a><span>Story Acceptance</span></h1>
+        <p>Before accepting a ticket:</p>
+        <p>Goal of below is to uncover all negatives, expand scope, find the bad stuff up front (as opposed to when coding natural tendancy is to find easiest most expedient way).</p>
+        <ul>
+            <li>
+                <h2>Planning</h2>
+                <ol>
+                    <li><input type="checkbox"><span>Read the ticket end to end including comments (ask the BA + UX + PO lots of questions - also consider getting another dev to read it with me)</span></li>
+                    <li><input type="checkbox"><span>Check it has acceptance criteria.</span></li>
+                    <li>
+                        <input type="checkbox">
+                        <span>Check it has super clear UX/UI acceptance criteria. If not:</span>
+                        <ul>
+                            <li><input type="checkbox"><span>Create crude sketches.</span></li>                            
+                            <li><input type="checkbox"><span>Get super clear on UX. This includes different screen sizes.</span></li>
+                        </ul>
+                    </li>                    
+                    <li><input type="checkbox"><span>Create a new branch and 'planning' PR off master.</span></li>
+                    <li>
+                        <input type="checkbox">
+                        <span>Write sudo high level (integration + e2e or rarely unit only for small tickets) tests:</span>
+                        <ul>
+                            <li><input type="checkbox"><span>One test for each PR (no more, no less).</span></li>
+                            <li><input type="checkbox"><span>Put them in the actual location in the application file structure.</span></li>
+                            <li><input type="checkbox"><span>Write the actual final test names inside `it` or `fun` and nest in `describe` or `inner class` as appropriate.</span></li>
+                            <li><input type="checkbox"><span>Put code comments inside the test body for each step, be very clear.</span></li>
+                        </ul>
+                    </li>
+                    <li><input type="checkbox"><span>Commit and push these tests.</span></li>
+                    <li><input type="checkbox">
+                        <span>
+                            Copy the file name, group, test name and test details (code comments) into code block quotes under each AC in the description in Jira.
+                            There must be a one to one mapping, or else we need to add/remove/split/change AC's. Don't be afraid to ask for AC's to be updated to be
+                            more exacting/clear.
+                        </span>
+                    </li>
+                    <li><input type="checkbox">Get agreement from PO + BA that if requirements that exceed the one-to-one AC/test plan are later uncovered that new tickets will be created.<span>Get sign off on these tests from BA, PO, SME, Dev.</span></li>
+                    <li><input type="checkbox"><span>Play in Legacy to see if the AC's really are solid.</span></li>
+                    <li>
+                        <input type="checkbox">
+                        <span>Sudo code the ticket + unit tests + storybook:</span>
+                        <ul>
+                            <li>
+                                <input type="checkbox">
+                                <span>Sudo code ticket:</span>
+                                <ul>
+                                    <li><input type="checkbox"><span>Put "TODO: TITLE-xxxx - details" comments everywhere in the code that you expect to make changes.</span></li>
+                                    <li><input type="checkbox"><span>Create new files as needed.</span></li>
+                                    <li><input type="checkbox"><span>Push these to the planning PR.</span></li>
+                                    <li><input type="checkbox"><span>Get another dev to sign off on these (gets ahead on PR review).</span></li>        
+                                </ul>
+                            </li>     
+                            <li>
+                                <input type="checkbox">
+                                <span>Sudo code storybook:</span>
+                                <ul>
+                                    <li><input type="checkbox"><span>Put "TODO: TITLE-xxxx - details" comments everywhere in the code that you expect to make changes.</span></li>
+                                    <li><input type="checkbox"><span>Create new files as needed.</span></li>
+                                    <li><input type="checkbox"><span>Push these to the planning PR.</span></li>
+                                    <li><input type="checkbox"><span>Get another dev to sign off on these (gets ahead on PR review).</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>Sudo code unit tests:</span>
+                                <ul>
+                                    <li><input type="checkbox"><span>Put them in the actual location in the application file structure.</span></li>
+                                    <li><input type="checkbox"><span>Write the actual final test names inside `it` or `fun` and nest in `describe` or `inner class` as appropriate.</span></li>
+                                    <li><input type="checkbox"><span>Put code comments inside the test body for each step, be very clear.</span></li>
+                                    <li><input type="checkbox"><span>Get another dev to sign off on the unit tests (gets ahead on PR review).</span></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li><input type="checkbox"><span>Copy the unit test plan into the ticket descpiption as per the integration tests.</span></li>
+                    <li><input type="checkbox"><span>Copy the coding plan into the ticket description.</span></li>
+                    <li><input type="checkbox"><span>Split the ticket into small chuncks using sub tasks.</span></li>
+                    <li><input type="checkbox"><span>With the help of another dev re-estimate the ticket by estimating sub tasks and adding together.</span></li>
+                    <li><input type="checkbox"><span>Suggest getting another dev on the ticket.</span></li>
+            </ol>
+        </li>      
+        <li>
+            <h2>Do the ticket</h2>
+            <ol>
+                <li><input type="checkbox"><span>Create a new branch and PR off the planning branch, don't use the planning branch.</span></li>
+                <li><input type="checkbox"><span>Write the tests.</span></li>
+                <li><input type="checkbox"><span>Write storybook.</span></li>
+                <li><input type="checkbox"><span>Write the code.</span></li>
+            </ol>
+        </li>      
+        </ul>
+        <button onclick="javascript: location.reload();">Clear</button>
+    </body>
+</html>
